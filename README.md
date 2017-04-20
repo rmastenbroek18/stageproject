@@ -9,6 +9,7 @@
 //Voegt het bestand toe aan git (git add -A, adds everything)
 4. git commit -m "added index.html"
 //Pushed het bestand en voegt een message toe.
+4.5. git push
 5. git pull
 //Haalt de bestanden op.
 
