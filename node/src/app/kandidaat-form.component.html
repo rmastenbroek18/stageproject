@@ -1,4 +1,32 @@
 <!--{{diagnostic}}-->
+<style>
+.meeting {
+    position: relative;
+    color: #00a1e8;
+}
+
+.meeting:after {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    margin-left: -1.5px;
+    content: '';
+    border-radius: 50%;
+    background-color: #00a1e8;
+}
+
+.k-state-selected .meeting {
+    color: #fff;
+}
+
+.k-state-selected .meeting:after {
+    background-color: #fff;
+}
+</style>
+<kendo-datepicker [disabled]="false" [value]="value"></kendo-datepicker>
+
 <div class="container">
     <h1>Kandidaat Formulier</h1>
     <form #kandidaatForm="ngForm" (ngSubmit)="onSubmit(kandidaatForm.value)">
@@ -8,7 +36,7 @@
             name="voornaam" ngModel>
             <label for="achternaam">achternaam:</label>
             <input type="text" class="form-control" id="achternaam"
-            name="achternaam" ngModel>                    
+            name="achternaam" ngModel>                              
         </div>
         <div class="adres">
             <label for="straatnaam">straatnaam:</label>
@@ -25,7 +53,7 @@
             name="postcode" ngModel>
             <label for="plaats">plaats:</label>
             <input type="text" class="form-control" id="plaats"
-            name="plaats" ngModel>                                     
+            name="plaats" ngModel>                                 
         </div> 
         <div class="telefoongegevens">
             <label for="telefoon">telefoon:</label>
@@ -59,5 +87,5 @@
             name="vervaldatum" ngModel>                     
         </div>                                                                                                                
         <button type="submit" class="btn btn-default">Versturen</button>
-    </form>
+    </form>   
 </div>
